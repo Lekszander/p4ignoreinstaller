@@ -1,0 +1,51 @@
+﻿<Window x:Class="p4ignoreinstaller.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:p4ignoreinstaller"
+        mc:Ignorable="d"
+        Title="P4 Ignore Installer" Height="350" Width="600" MaxHeight="350" MaxWidth="600">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="703*"/>
+			<ColumnDefinition Width="89*"/>
+		</Grid.ColumnDefinitions>
+		<DockPanel Grid.ColumnSpan="2">
+			<StackPanel DockPanel.Dock="Left">
+				<Label Content="Welcome" HorizontalAlignment="Left" Margin="10,5" VerticalAlignment="Top" Width="264" FontWeight="Bold" FontSize="16"/>
+				<TextBlock x:Name="Instructions" HorizontalAlignment="Left" Margin="20,10" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" Width="252" FontSize="13">
+					<Run Text="This utility is meant to install a standard Unreal Engine 4 Perforce ignore file to your workstation and add said file to your P4IGNORE environment variable."/>
+				</TextBlock>
+				<Separator/>
+				<Label Content="Settings" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+				<Label Margin="15,0" Content="Default ignore file content" FontSize="13"/>
+				<Button HorizontalAlignment="Left" Margin="20,0,0,0" Click="Edit_Contents_Click">
+					<Label>Edit contents</Label>
+				</Button>
+			</StackPanel>
+			<StackPanel DockPanel.Dock="Right">
+				<GroupBox Header="P4 File" Margin="10,10">
+					<Grid>
+						<StackPanel Margin="10,10">
+							<TextBlock TextWrapping="Wrap" HorizontalAlignment="Center">Please select the location where you would like your ignore file to be installed to.</TextBlock>
+							<Button HorizontalAlignment="Center" Margin="0,20" Click="Select_Folder_Click">
+								<Label>Select Folder</Label>
+							</Button>
+						</StackPanel>
+					</Grid>
+				</GroupBox>
+				<GroupBox Name="InstallBox" Header="Install" Margin="10,10" IsEnabled="True">
+					<Grid>
+						<StackPanel Margin="10,10">
+							<TextBlock Name="InstallStatusLabel" HorizontalAlignment="Center" TextWrapping="Wrap">Ready?</TextBlock>
+							<Button Name="InstallButton" HorizontalAlignment="Center" Margin="0,20" Background="LightGreen" Click="Install_Click">
+								<Label Name="InstallButtonLabel">Start Process</Label>
+							</Button>
+						</StackPanel>
+					</Grid>
+				</GroupBox>
+			</StackPanel>
+		</DockPanel>
+	</Grid>
+</Window>

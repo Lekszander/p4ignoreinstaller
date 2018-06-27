@@ -1,0 +1,24 @@
+# Ignore files
+*.sln
+.vs
+obj\
+*.suo
+*.opensdf
+*.sdf
+*.pdb
+*-Debug.*
+*.vcxproj
+.\Makefile
+.\CMakeLists.txt
+.\.ue4dependencies
+*BuildData.uasset
+
+# Ignore folders
+Binaries
+Intermediate
+Saved
+DerivedDataCache
+FileOpenOrder
+
+# Ignore crash reports
+crashinfo--*
