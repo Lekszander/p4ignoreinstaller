@@ -9,5 +9,8 @@ The Perforce ignore file doesn't work like a .gitignore file. It can be located 
 * **Deploy**  
 As the name implies, this sets the environment variable to point to your file.
 
+## Requirements
+* Operating system: Windows Vista or newer.
+
 ## Dependencies
 * AvalonEdit 5.0.4
