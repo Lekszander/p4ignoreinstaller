@@ -13,4 +13,7 @@ As the name implies, this sets the environment variable to point to your file.
 * Operating system: Windows Vista or newer.
 
 ## Dependencies
-* AvalonEdit 5.0.4
+* AvalonEdit 5.0.4 (https://www.nuget.org/packages/AvalonEdit/)  
+Install via: **Install-Package AvalonEdit -Version 5.0.4**
+* WindowsAPICodePack-Shell (https://www.nuget.org/packages/WindowsAPICodePack-Shell/)  
+Install via: **Install-Package WindowsAPICodePack-Shell**
