@@ -4,31 +4,33 @@ namespace p4ignoreinstaller
 {
     class IgnoreFileInfo
     {
+        private static readonly string defaultContent =     "# Ignore files" + Environment.NewLine +
+                                                            "*.sln" + Environment.NewLine +
+                                                            ".vs" + Environment.NewLine +
+                                                            @"obj\" + Environment.NewLine +
+                                                            "*.suo" + Environment.NewLine +
+                                                            "*.opensdf" + Environment.NewLine +
+                                                            "*.sdf" + Environment.NewLine +
+                                                            "*.pdb" + Environment.NewLine +
+                                                            "* -Debug.*" + Environment.NewLine +
+                                                            "*.vcxproj" + Environment.NewLine +
+                                                            @".\Makefile" + Environment.NewLine +
+                                                            @".\CMakeLists.txt" + Environment.NewLine +
+                                                            @".\.ue4dependencies" + Environment.NewLine +
+                                                            "* BuildData.uasset" + Environment.NewLine +
+                                                            Environment.NewLine +
+                                                            "# Ignore folders" + Environment.NewLine +
+                                                            "Binaries" + Environment.NewLine +
+                                                            "Intermediate" + Environment.NewLine +
+                                                            "Saved" +Environment.NewLine +
+                                                            "DerivedDataCache" + Environment.NewLine +
+                                                            "FileOpenOrder" + Environment.NewLine +
+                                                            Environment.NewLine +
+                                                            "# Ignore crash reports" + Environment.NewLine +
+                                                            "crashinfo--*" + Environment.NewLine;
+
         public string FilePath { get; private set; }
-        public string Text { get; private set; } = "# Ignore files" + Environment.NewLine +
-                                                    "*.sln" + Environment.NewLine +
-                                                    ".vs" + Environment.NewLine +
-                                                    @"obj\" + Environment.NewLine +
-                                                    "*.suo" + Environment.NewLine +
-                                                    "*.opensdf" + Environment.NewLine +
-                                                    "*.sdf" + Environment.NewLine +
-                                                    "*.pdb" + Environment.NewLine +
-                                                    "* -Debug.*" + Environment.NewLine +
-                                                    "*.vcxproj" + Environment.NewLine +
-                                                    @".\Makefile" + Environment.NewLine +
-                                                    @".\CMakeLists.txt" + Environment.NewLine +
-                                                    @".\.ue4dependencies" + Environment.NewLine +
-                                                    "* BuildData.uasset" + Environment.NewLine +
-                                                    Environment.NewLine +
-                                                    "# Ignore folders" + Environment.NewLine +
-                                                    "Binaries" + Environment.NewLine +
-                                                    "Intermediate" + Environment.NewLine +
-                                                    "Saved" + Environment.NewLine +
-                                                    "DerivedDataCache" + Environment.NewLine +
-                                                    "FileOpenOrder" + Environment.NewLine +
-                                                    Environment.NewLine +
-                                                    "# Ignore crash reports" + Environment.NewLine +
-                                                    "crashinfo--*" + Environment.NewLine;
+        public string Text { get; private set; } = defaultContent;
 
         public IgnoreFileInfo()
         {

@@ -40,7 +40,7 @@
 						<StackPanel Margin="10,10">
 							<TextBlock Name="InstallStatusLabel" HorizontalAlignment="Center" TextWrapping="Wrap">Ready?</TextBlock>
 							<Button Name="InstallButton" HorizontalAlignment="Center" Margin="0,20" Background="LightGreen" Click="Install_Click">
-								<Label Name="InstallButtonLabel">Start Process</Label>
+								<Label Name="InstallButtonLabel">Deploy</Label>
 							</Button>
 						</StackPanel>
 					</Grid>
