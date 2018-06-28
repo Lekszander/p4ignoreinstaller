@@ -11,7 +11,7 @@ namespace p4ignoreinstaller
         {
             base.OnStartup(e);
 
-            Properties["IgnoreFile"] = new IgnoreFileInfo();
+            Properties["IgnoreFile"] = new IgnoreFileInfo(p4ignoreinstaller.Properties.Resources.DefaultIgnoreFile);
         }
     }
 }
